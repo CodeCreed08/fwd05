@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Student Login - Mess Card Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <hgroup>
+            <h1>Mess Card Management System</h1>
+            <p>South Asian University - Student Portal</p>
+        </hgroup>
+    </header>
+    <nav>
+        <a href="student-login.html">Student Login</a> |
+        <a href="staff-login.html">Staff Login</a> |
+        <a href="admin-login.html">Admin Login</a>
+    </nav>
+    <main>
+        <form action="student-dashboard.html" method="GET">
+            <fieldset>
+                <legend>Student Portal Login</legend>
+                <p>
+                    <label for="student_id"><strong>Student ID / Roll Number</strong></label><br>
+                    <input type="text" id="student_id" name="student_id" placeholder="e.g., SAU/2026/BTECH/01" required>
+                </p>
+                <p>
+                    <label for="password"><strong>Password</strong></label><br>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </p>
+                <p>
+                    <button type="submit">Login to Dashboard</button>
+                </p>
+                <p><small>New student? Contact the Mess Admin office for initial credentials.</small></p>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <address>South Asian University, New Delhi, India</address>
+        <p><small>&copy; 2026 Mess Card Management System</small></p>
+    </footer>
+</body>
+</html>

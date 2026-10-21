@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Staff Login - Mess Card Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <hgroup>
+            <h1>Mess Card Management System</h1>
+            <p>Mess Counter Staff Portal</p>
+        </hgroup>
+    </header>
+    <nav>
+        <a href="student-login.html">Student Login</a> |
+        <a href="staff-login.html">Staff Login</a> |
+        <a href="admin-login.html">Admin Login</a>
+    </nav>
+    <main>
+        <form action="staff-scanner.html" method="GET">
+            <fieldset>
+                <legend>Staff Counter Login</legend>
+                <p>
+                    <label for="staff_id"><strong>Staff ID</strong></label><br>
+                    <input type="text" id="staff_id" name="staff_id" placeholder="Enter Staff ID" required>
+                </p>
+                <p>
+                    <label for="staff_pass"><strong>Password</strong></label><br>
+                    <input type="password" id="staff_pass" name="staff_pass" placeholder="Enter Password" required>
+                </p>
+                <p>
+                    <button type="submit">Open Scanner Station</button>
+                </p>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <address>South Asian University, New Delhi, India</address>
+        <p><small>&copy; 2026 Mess Card Management System</small></p>
+    </footer>
+</body>
+</html>

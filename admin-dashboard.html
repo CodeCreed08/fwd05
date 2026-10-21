@@ -1,0 +1,78 @@
+<html>
+<head>
+    <title>Admin Dashboard - Mess Card Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <hgroup>
+            <h1>Admin Dashboard</h1>
+            <p>System Overview & Scan Logs</p>
+        </hgroup>
+    </header>
+    <nav>
+        <a href="admin-dashboard.html">Overview</a> |
+        <a href="admin-login.html">Logout</a>
+    </nav>
+    <main>
+        <section>
+            <h2>System Statistics</h2>
+            <div style="display: flex; gap: 15px; margin: 15px 0; flex-wrap: wrap;">
+                <div style="flex: 1; background: #fff1e6; padding: 15px; border-radius: 6px; text-align: center;">
+                    <h3>450</h3>
+                    <p>Total Subscriptions</p>
+                </div>
+                <div style="flex: 1; background: #e6ffed; padding: 15px; border-radius: 6px; text-align: center;">
+                    <h3>380</h3>
+                    <p>Scanned Today (Lunch)</p>
+                </div>
+                <div style="flex: 1; background: #fff5e6; padding: 15px; border-radius: 6px; text-align: center;">
+                    <h3>70</h3>
+                    <p>Pending / Not Eaten</p>
+                </div>
+            </div>
+        </section>
+        <section id="students">
+            <h2>Registered Students & Subscriptions</h2>
+            <search style="margin: 10px 0;">
+                <form>
+                    <input type="search" placeholder="Search student records..." style="width: 70%; display: inline-block;">
+                    <button type="submit" style="width: 25%; display: inline-block;">Search</button>
+                </form>
+            </search>
+            <table>
+                <caption>Active Student Records</caption>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Meal Plan</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SAU/2026/BTECH/01</td>
+                        <td>Daksh Mohan</td>
+                        <td>Hostler</td>
+                        <td>Veg - Full Day</td>
+                        <td><span class="pill-active">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>SAU/2026/BTECH/02</td>
+                        <td>Aarav Sharma</td>
+                        <td>Day Scholar</td>
+                        <td>Lunch Only</td>
+                        <td><span class="pill-expired">Expired</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <address>South Asian University Administrative Block</address>
+        <p><small>&copy; 2026 Mess Card Management System</small></p>
+    </footer>
+</body>
+</html>

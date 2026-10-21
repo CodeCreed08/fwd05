@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Staff Scanner - Mess Card Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <hgroup>
+            <h1>Mess Counter Scanner</h1>
+            <p>Real-time QR Code Verification Station</p>
+        </hgroup>
+    </header>
+    <nav>
+        <a href="staff-scanner.html">Live Scanner</a> |
+        <a href="staff-login.html">Logout</a>
+    </nav>
+    <main>
+        <section style="text-align: center;">
+            <h2>Camera Feed</h2>
+            <div style="width: 100%; max-width: 400px; height: 250px; background: #222; color: white; margin: 15px auto; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+            </div>
+            <p><small>Position the student's digital QR card inside the camera frame for automatic verification.</small></p>
+        </section>
+        <section style="margin-top: 20px;">
+            <fieldset>
+                <legend>Fallback Manual ID Entry</legend>
+                <form onsubmit="event.preventDefault(); alert('Success: Card verified and meal-window locked!');">
+                    <label for="card_id"><strong>Student ID / Roll Number</strong></label>
+                    <input type="text" id="card_id" name="card_id" placeholder="e.g., SAU/2026/BTECH/01" required>
+                    <button type="submit">Verify & Lock Meal</button>
+                </form>
+            </fieldset>
+        </section>
+    </main>
+    <footer>
+        <address>South Asian University Mess Counter</address>
+        <p><small>&copy; 2026 Mess Card Management System</small></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: #fff8f2;
+    color: #231F2A;
+    line-height: 1.6;
+}
+header {
+    background: linear-gradient(to right, #f97316, #dc2626);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    background: #231F2A;
+    padding: 12px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+main {
+    padding: 25px;
+    max-width: 900px;
+    margin: 25px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+fieldset {
+    border: 2px solid #f97316;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+legend {
+    font-weight: bold;
+    color: #c2410c;
+    background: #fff7ed;
+    padding: 5px 10px;
+    border: 1px solid #f97316;
+    border-radius: 4px;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    background: #ea580c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+button:hover {
+    background: #c2410c;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background-color: #f97316;
+    color: white;
+}
+.pill-active { background: #3DCE6F; color: white; padding: 4px 8px; border-radius: 12px; font-size: 12px; }
+.pill-locked { background: #f0ad4e; color: white; padding: 4px 8px; border-radius: 12px; font-size: 12px; }
+.pill-expired { background: #d9534f; color: white; padding: 4px 8px; border-radius: 12px; font-size: 12px; }
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #231F2A;
+    color: white;
+    margin-top: 30px;
+}

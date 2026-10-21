@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Admin Login - Mess Card Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <hgroup>
+            <h1>Mess Card Management System</h1>
+            <p>Administrative Control Panel</p>
+        </hgroup>
+    </header>
+    <nav>
+        <a href="student-login.html">Student Login</a> |
+        <a href="staff-login.html">Staff Login</a> |
+        <a href="admin-login.html">Admin Login</a>
+    </nav>
+    <main>
+        <form action="admin-dashboard.html" method="GET">
+            <fieldset>
+                <legend>Administrator Login</legend>
+                <p>
+                    <label for="admin_user"><strong>Admin Username</strong></label><br>
+                    <input type="text" id="admin_user" name="admin_user" placeholder="Enter admin username" required>
+                </p>
+                <p>
+                    <label for="admin_pass"><strong>Secure Password</strong></label><br>
+                    <input type="password" id="admin_pass" name="admin_pass" placeholder="Enter secure password" required>
+                </p>
+                <p>
+                    <button type="submit">Access Admin Dashboard</button>
+                </p>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <address>South Asian University, New Delhi, India</address>
+        <p><small>&copy; 2026 Mess Card Management System</small></p>
+    </footer>
+</body>
+</html>
