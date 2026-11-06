@@ -1,5 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Login - Mess Card Management System</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,18 +14,17 @@
         </hgroup>
     </header>
     <nav>
-        <a href="index.html">Home</a> |
         <a href="student-login.html">Student Login</a> |
         <a href="staff-login.html">Staff Login</a> |
         <a href="admin-login.html">Admin Login</a>
     </nav>
     <main>
-        <form action="student-dashboard.html" method="GET">
+        <form action="student-dashboard.html" method="POST">
             <fieldset>
                 <legend>Student Portal Login</legend>
                 <p>
                     <label for="student_id"><strong>Student ID / Roll Number</strong></label><br>
-                    <input type="text" id="student_id" name="student_id" placeholder="e.g., SAU/FET/BTECHCSE/2026/000" required>
+                    <input type="text" id="student_id" name="student_id" placeholder="e.g., SAU/2026/BTECH/01" required>
                 </p>
                 <p>
                     <label for="password"><strong>Password</strong></label><br>
