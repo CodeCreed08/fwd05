@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Mess Card</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../index.html" class="logo">Mess Card</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="student-login.html">Student Login</a></li>
+                <li><a href="staff-login.html">Staff Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="auth-container">
+        <h2 class="section-title">Admin Control Panel</h2>
+        <p class="section-subtitle">System Overview & Logs</p>
+        <form action="admin-dashboard.html" method="GET">
+            <label for="admin_user">Admin Username</label>
+            <input type="text" id="admin_user" placeholder="Enter admin username" required>
+            <label for="admin_pass">Secure Password</label>
+            <input type="password" id="admin_pass" placeholder="Enter secure password" required>
+            <button type="submit" class="btn primary">Access Dashboard</button>
+        </form>
+    </section>
+</body>
+</html>

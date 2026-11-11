@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login - Mess Card</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../index.html" class="logo">Mess Card</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="admin-login.html">Admin Login</a></li>
+                <li><a href="staff-login.html">Staff Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="auth-container">
+        <h2 class="section-title">Student Portal</h2>
+        <p class="section-subtitle">Login to view your QR and wallet.</p>
+        <form action="student-dashboard.html" method="POST">
+            <label for="student_id">Student ID / Roll Number</label>
+            <input type="text" id="student_id" placeholder="e.g., SAU/2026/BTECH/01" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <button type="submit" class="btn primary">Login to Dashboard</button>
+            <p style="text-align: center; margin-top: 25px; font-size: 0.95rem; color: #1e3a8a;">
+                New student?
+                <a href="student-registration.html" style="color: #2563eb; font-weight: 800; text-decoration: none; transition: color 0.2s ease;">Create an account</a>
+            </p>
+        </form>
+    </section>
+</body>
+</html>

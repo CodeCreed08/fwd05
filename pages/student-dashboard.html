@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Home - Mess Card</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">×</button>
+        <a href="student-dashboard.html">🏠 Dashboard</a>
+        <a href="qrscan.html">📷 Scan QR</a>
+        <a href="student-profile.html">👤 My Profile</a>
+        <a href="student-login.html" style="margin-top: 20px; color: #ff6b6b;">🚪 Logout</a>
+    </nav>
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+    <header>
+        <nav class="navbar">
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            <a href="../index.html" class="logo">Mess Card</a>
+            <ul class="nav-links">
+                <li><a href="student-dashboard.html">Dashboard</a></li>
+                <li><a href="qrscan.html">Scan QR</a></li>
+                <li><a href="student-profile.html">My Profile</a></li>
+                <li><a href="student-login.html" style="color: #dc2626;">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="dashboard">
+        <h2 style="color: #183b56;">Account Overview</h2>
+        <div class="dashboard-cards">
+            <div class="dash-card">
+                <h3>Wallet Balance</h3>
+                <h2>₹450</h2>
+            </div>
+            <div class="dash-card">
+                <h3>Plan Remaining</h3>
+                <h2>24 <small style="font-size: 1rem; color: #ccc;">Days</small></h2>
+            </div>
+        </div>
+        <section class="auth-container" style="margin-top: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+            <h3 style="color: #183b56; text-align: center;">Top-up & Renew</h3>
+            <p style="color: #667085; text-align: center; font-size: 0.9rem;">Add funds for pay-per-meal or renew your monthly plan.</p>
+            <form onsubmit="event.preventDefault(); alert('Redirecting to payment gateway...');">
+                <input type="number" placeholder="Enter amount (₹)" required>
+                <button type="submit" class="btn primary">Proceed to Pay</button>
+            </form>
+        </section>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="qrscan.html" class="btn primary" style="background-color: #183b56;">📷 Scan Mess QR Counter</a>
+        </div>
+    </main>
+    <script>
+        function toggleMenu() {
+        }
+    </script>
+</body>
+</html>

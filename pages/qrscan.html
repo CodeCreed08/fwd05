@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scan QR - Mess Card</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+</head>
+<body>
+    <nav class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">×</button>
+        <a href="student-dashboard.html">🏠 Dashboard</a>
+        <a href="qrscan.html">📷 Scan QR</a>
+        <a href="student-login.html" style="margin-top: 20px; color: #ff6b6b;">🚪 Logout</a>
+    </nav>
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+    <header>
+        <nav class="navbar">
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            <a href="../index.html" class="logo">Mess Card</a>
+            <ul class="nav-links">
+                <li><a href="student-dashboard.html">Dashboard</a></li>
+                <li><a href="qrscan.html">Scan QR</a></li>
+                <li><a href="student-profile.html">My Profile</a></li>
+                <li><a href="student-login.html" style="color: #dc2626;">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="content">
+        <h2 class="section-title">Scan Counter QR</h2>
+        <p class="section-subtitle">Center the mess counter's QR code inside the frame.</p>
+        <div style="width: 100%; height: 300px; background: #1a1a1a; border-radius: 8px; overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+            <video id="camera-stream" autoplay playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+            <canvas id="qr-canvas" hidden></canvas>
+            <span id="camera-error" style="color: #ff6b6b; position: absolute; display: none; padding: 10px;">Camera access denied.</span>
+        </div>
+        <div id="scan-result" style="margin-top: 15px; text-align: center; font-weight: bold; color: #2e8b75;"></div>
+    </main>
+    <script>
+        function toggleMenu() {
+        }
+        const video = document.getElementById('camera-stream');
+        const canvasElement = document.getElementById('qr-canvas');
+        const canvas = canvasElement.getContext('2d');
+        let scanning = true;
+        function startCamera() {
+            navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } })
+                .then(function(stream) {
+                    video.srcObject = stream;
+                    video.play();
+                    requestAnimationFrame(tick);
+                })
+                .catch(function(error) {
+                    document.getElementById('camera-error').style.display = "block";
+                });
+        }
+        function tick() {
+            if (video.readyState === video.HAVE_ENOUGH_DATA && scanning) {
+                canvasElement.height = video.videoHeight;
+                canvasElement.width = video.videoWidth;
+                canvas.drawImage(video, 0, 0, canvasElement.width, canvasElement.height);
+                const imageData = canvas.getImageData(0, 0, canvasElement.width, canvasElement.height);
+                const code = jsQR(imageData.data, imageData.width, imageData.height, { inversionAttempts: "dontInvert" });
+                if (code && code.data) {
+                    scanning = false;
+                    document.getElementById('scan-result').innerText = "Scanned: " + code.data;
+                    alert("Success! Mess QR Scanned: " + code.data);
+                    return;
+                }
+            }
+            if (scanning) requestAnimationFrame(tick);
+        }
+        function simulateScan() {
+            alert("Success! Mess QR Scanned: SAU_MESS_COUNTER_01");
+        }
+        window.onload = startCamera;
+    </script>
+</body>
+</html>

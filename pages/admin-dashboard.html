@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard - Mess Card</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../index.html" class="logo">Mess Card</a>
+            <ul class="nav-links">
+                <li><a href="admin-dashboard.html">Overview</a></li>
+                <li><a href="admin-login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="dashboard">
+        <h2 class="section-title">System Statistics</h2>
+        <div class="dashboard-cards">
+            <div class="dash-card">
+                <h3>Total Subscriptions</h3>
+                <h2>450</h2>
+            </div>
+            <div class="dash-card">
+                <h3>Scanned Today (Lunch)</h3>
+                <h2>380</h2>
+            </div>
+            <div class="dash-card">
+                <h3>Pending / Not Eaten</h3>
+                <h2>70</h2>
+            </div>
+        </div>
+        <section id="students">
+            <h3 class="section-title" style="margin-top: 40px; margin-bottom: 15px;">Registered Students & Subscriptions</h3>
+            <form class="search-form">
+                <input type="search" placeholder="Search student records..." required>
+                <button type="submit" class="btn primary">Search</button>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Meal Plan</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SAU/2026/BTECH/01</td>
+                        <td>Daksh Mohan</td>
+                        <td>Hostler</td>
+                        <td>Veg - Full Day</td>
+                        <td><span>Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>SAU/2026/BTECH/02</td>
+                        <td>Aarav Sharma</td>
+                        <td>Day Scholar</td>
+                        <td>Lunch Only</td>
+                        <td><span class="pill-expired">Expired</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

@@ -3,45 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mess Card Management System - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mess Card Management | South Asian University</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <hgroup>
-            <h1>Mess Card Management System</h1>
-            <p>Digitizing Campus Dining for a Seamless Experience</p>
-        </hgroup>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Mess Card</a>
+            <ul class="nav-links">
+                <li><a href="pages/student-login.html">Student Login</a></li>
+                <li><a href="pages/staff-login.html">Staff Login</a></li>
+                <li><a href="pages/admin-login.html">Admin Login</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <section style="text-align: center; margin-bottom: 40px;">
-            <h2>Welcome to the Smart Mess Portal</h2>
-            <p style="margin-top: 10px; color: #555;">
-                Say goodbye to lost paper cards and long queues. Our digital platform ensures a smooth, secure, and hassle-free dining experience for all students and staff.
-            </p>
-            <hr style="margin: 20px auto; width: 50px; border: 2px solid #2965F1;">
+        <section class="hero-section">
+            <div class="sau-badge">🚀 Built for South Asian University</div>
+            <h1 class="main-headline">Digital Dining, <br><span class="text-gradient">Simplified.</span></h1>
+            <p class="hero-subtext">Experience a seamless, cashless, and queue-free mess. Your student ID is your wallet, and your phone is your daily pass.</p>
         </section>
-        <section style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-            <article style="flex: 1; min-width: 250px; background: white; border: 1px solid #ddd; border-radius: 8px; padding: 30px 20px; text-align: center;">
-                <h3 style="color: #2965F1;">👨‍🎓 Student Portal</h3>
-                <p style="margin: 15px 0;">Register for meal plans, renew your subscription, and access your live digital QR mess card.</p>
-                <a href="student-login.html" style="display: inline-block; background: #2965F1; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-weight: bold;">Enter Student Portal</a>
-            </article>
-            <article style="flex: 1; min-width: 250px; background: white; border: 1px solid #ddd; border-radius: 8px; padding: 30px 20px; text-align: center;">
-                <h3 style="color: #2965F1;">🧑‍🍳 Staff Portal</h3>
-                <p style="margin: 15px 0;">Access the live QR scanner station to verify student meals instantly at the counter.</p>
-                <a href="staff-login.html" style="display: inline-block; background: #2965F1; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-weight: bold;">Enter Staff Portal</a>
-            </article>
-            <article style="flex: 1; min-width: 250px; background: white; border: 1px solid #ddd; border-radius: 8px; padding: 30px 20px; text-align: center;">
-                <h3 style="color: #2965F1;">⚙️ Admin Portal</h3>
-                <p style="margin: 15px 0;">Manage campus subscriptions, monitor daily scan logs, and oversee the entire system.</p>
-                <a href="admin-login.html" style="display: inline-block; background: #2965F1; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-weight: bold;">Enter Admin Portal</a>
-            </article>
+        <section class="portal-grid">
+            <div class="portal-card">
+                <div class="portal-icon">🎓</div>
+                <h3>Student Portal</h3>
+                <p>Register for meal plans, top-up your wallet, and access your live digital QR pass.</p>
+                <a href="pages/student-login.html" class="btn primary">Enter Student Portal</a>
+            </div>
+            <div class="portal-card">
+                <div class="portal-icon">👨‍🍳</div>
+                <h3>Staff Station</h3>
+                <p>Access the counter QR display to instantly verify meals for the active shift.</p>
+                <a href="pages/staff-login.html" class="btn secondary">Open Counter</a>
+            </div>
+            <div class="portal-card">
+                <div class="portal-icon">⚙️</div>
+                <h3>Admin Dashboard</h3>
+                <p>Manage campus subscriptions, monitor live scan logs, and oversee the system.</p>
+                <a href="pages/admin-login.html" class="btn secondary">System Login</a>
+            </div>
         </section>
     </main>
     <footer>
-        <address>South Asian University, New Delhi, India</address>
-        <p><small>&copy; 2026 Mess Card Management System</small></p>
+        <p>© 2026 Smart Mess Card Management System | Developed for SAU</p>
     </footer>
 </body>
 </html>

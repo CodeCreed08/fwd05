@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Login - Mess Card</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../index.html" class="logo">Mess Card</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="student-login.html">Student Login</a></li>
+                <li><a href="admin-login.html">Admin Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="auth-container">
+        <h2 class="section-title">Mess Counter Station</h2>
+        <p class="section-subtitle">Staff Portal for QR Generation</p>
+        <form action="staff-scanner.html" method="GET">
+            <label for="staff_id">Staff ID</label>
+            <input type="text" id="staff_id" placeholder="Enter Staff ID" required>
+            <label for="staff_pass">Password</label>
+            <input type="password" id="staff_pass" placeholder="Enter Password" required>
+            <button type="submit" class="btn primary">Open Station</button>
+        </form>
+    </section>
+</body>
+</html>

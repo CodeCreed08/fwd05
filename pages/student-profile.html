@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Mess Card</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">×</button>
+        <a href="student-dashboard.html">🏠 Dashboard</a>
+        <a href="qrscan.html">📷 Scan QR</a>
+        <a href="student-profile.html" style="color: #93c5fd;">👤 My Profile</a>
+        <a href="student-login.html" style="margin-top: 20px; color: #ef4444;">🚪 Logout</a>
+    </nav>
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+    <header>
+        <nav class="navbar">
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            <a href="../index.html" class="logo">Mess Card</a>
+            <ul class="nav-links">
+                <li><a href="student-dashboard.html">Dashboard</a></li>
+                <li><a href="qrscan.html">Scan QR</a></li>
+                <li><a href="student-profile.html">My Profile</a></li>
+                <li><a href="student-login.html" style="color: #dc2626;">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="content">
+        <section class="auth-container" style="text-align: center;">
+            <div style="width: 120px; height: 120px; background-color: #dbeafe; color: #2563eb; font-size: 3rem; font-weight: 800; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin: 0 auto 20px; border: 4px solid #bfdbfe;">
+                DM
+            </div>
+            <h2 class="section-title" style="margin-bottom: 5px;">Daksh Mohan</h2>
+            <p class="section-subtitle" style="margin-bottom: 25px;">SAU/2026/BTECH/01</p>
+            <div style="text-align: left; background: #f8fafc; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 20px;">
+                <p style="margin-bottom: 12px; font-size: 1.05rem;">
+                    <strong><span style="color: #64748b;">Course:</span></strong><br>
+                    B.Tech Computer Science and Engineering
+                </p>
+                <p style="margin-bottom: 12px; font-size: 1.05rem;">
+                    <strong><span style="color: #64748b;">Year:</span></strong><br>
+                    1st Year
+                </p>
+                <p style="margin-bottom: 12px; font-size: 1.05rem;">
+                    <strong><span style="color: #64748b;">Mobile Number:</span></strong><br>
+                    +91 98765 43210
+                </p>
+                <p style="margin-bottom: 0; font-size: 1.05rem;">
+                    <strong><span style="color: #64748b;">Category:</span></strong><br>
+                    Hostler
+                </p>
+            </div>
+            <button class="btn secondary">Request Details Update</button>
+        </section>
+    </main>
+    <script>
+        function toggleMenu() {
+        }
+    </script>
+</body>
+</html>

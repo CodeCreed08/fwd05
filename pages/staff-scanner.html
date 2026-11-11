@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Staff Counter - Mess Card</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../index.html" class="logo">Mess Card</a>
+            <ul class="nav-links">
+                <li><a href="staff-scanner.html">Counter QR</a></li>
+                <li><a href="staff-login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="dashboard">
+        <section class="auth-container" style="text-align: center;">
+            <h2 class="section-title">Daily Counter QR Code</h2>
+            <p class="section-subtitle">Students scan this to log their meal.</p>
+            <div id="qrcode" style="display: flex; justify-content: center; padding: 20px; background: #f5f7fb; border-radius: 8px; margin-bottom: 15px;"></div>
+            <p id="qr-text" style="font-size: 0.8rem; color: #666;"></p>
+            <button onclick="generateQR()" class="btn primary">Generate New QR</button>
+        </section>
+        <section class="auth-container">
+            <h3 style="color: #183b56; text-align: center; margin-bottom: 15px;">Manual ID Entry</h3>
+            <form onsubmit="event.preventDefault(); alert('Card verified manually!');">
+                <label for="card_id">Student ID</label>
+                <input type="text" id="card_id" placeholder="e.g., SAU/2026/BTECH/01" required>
+                <button type="submit" class="btn primary" style="background-color: #183b56;">Verify</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        function generateQR() {
+            const today = new Date().toISOString().slice(0, 10);
+            const qrString = "SAU_MESS_" + today;
+            const container = document.getElementById("qrcode");
+            container.innerHTML = "";
+            new QRCode(container, { text: qrString, width: 200, height: 200 });
+            document.getElementById("qr-text").innerText = "Data: " + qrString;
+        }
+        window.onload = generateQR;
+    </script>
+</body>
+</html>
